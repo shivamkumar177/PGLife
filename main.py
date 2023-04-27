@@ -8,8 +8,6 @@ app = FastAPI()
 
 api_router = FastAPI()
 
-
-
 templates = Jinja2Templates(directory="templates")
 app.mount("/templates", StaticFiles(directory="templates"), name="templates")
 @app.get("/", response_class=HTMLResponse)
